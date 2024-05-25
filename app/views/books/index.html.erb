@@ -1,8 +1,8 @@
 <h1>Books</h1>
 
 <%= form_with(model: @book, url: books_path,local: :true) do |form| %>
-<%= form.text_field :title,placeholder: "タイトル" %>
-<%= form.text_area :body,placeholder: "本文" %>
+<%= form.text_field :title %>
+<%= form.text_area :body %>
 <%= form.submit 'Create Book'%>
 <% end %>
 

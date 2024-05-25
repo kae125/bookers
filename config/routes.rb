@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'books',to:'books#index',as:'books'
   root to: 'homes#top'
   get 'books/index'
   get 'books/new'
