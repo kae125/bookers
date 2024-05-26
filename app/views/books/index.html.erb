@@ -1,13 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>WebCampBackendNew</title>
+  <meta name="csrf-param" content="authenticity_token"> 
+  <meta name="csrf-token" content="o3yyQrlbSTOKI1tfBuUz0oYYqsxcvgEi6i2Jl6AaB34M/gbqNwJlxHEAx2qcC1aBagiO7VP1QI2yQQmgBn8RRQ==">
+  <link rel="stylesheet" media="all" href="/assets/application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css" data-turbolinks-track="reload">
+  <script src="/assets/application-114264dd93c8ff30e4335b71eed7949d66c4e7a8eb62e2de6284c046fe07104b.js" data-turbolinks-track="reload"></script>
+ </head>
+ 
+ <body>
+   <p id="notice"></p>
+   
 <h1>Books</h1>
-
-<% if @list.errors.any? %>
-  <%= @list.errors.count %>件のエラーが発生しました
-  <ul>
-    <% @list.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ul>
-<% end %>
+<table>
+ <thead>
+  <tr>
+   <th>Title</th>
+   <th>Body</th>
+   <th colspan="3"></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>リーダブルコード</td>
+   <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
+   <td>
+    <a class="show_223086" href="/books/223086">Show</a>
+   </td>
+   <td>
+    <a class="edit_223086" href="/books/223086/edit">Edit</a>
+   </td>
+   <td>
+    <a data-confirm="Are you sure?" class="destroy_223086" rel="nofollow" data-method="delete" href="/books.223086">Destroy</a>
+   </td>
+  </tr>
 
 
 <%= form_with(model: @book, url: books_path,local: :true) do |form| %>
