@@ -31,8 +31,10 @@
    <%= book.body %>
   </td>
   <td>
-   <%= link_to "show", book_path(book.id) %>
-  </td
+   <%= link_to "Show", book_path(book.id) %>
+   <%= link_to "Edit", book_path(book.id) %>
+   <%= link_to "Destroy", book_path(book.id) %>
+  </td>
  </tr>
  
   
