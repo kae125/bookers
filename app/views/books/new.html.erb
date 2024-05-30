@@ -1,2 +1,23 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h1>新しい本作成</h1>
+
+<%= form_for @book do |f| %>
+
+  <div class="field">
+
+    <%= f.label :title %>
+
+    <%= f.text_field :title %>
+
+  </div>
+
+  <div class="field">
+
+    <%= f.label :body %>
+
+    <%= f.text_area :body %>
+
+  </div>
+
+  <%= f.submit "作成" %>
+
+<% end %>
