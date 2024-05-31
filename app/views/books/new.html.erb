@@ -1,23 +1,14 @@
 <h1>新しい本作成</h1>
 
-<%= form_for @book do |f| %>
+<%= form_with model: Book.new do |f| %>
 
-  <div class="field">
-
-    <%= f.label :title %>
 
     <%= f.text_field :title %>
 
-  </div>
-
-  <div class="field">
-
-    <%= f.label :body %>
 
     <%= f.text_area :body %>
 
-  </div>
 
-  <%= f.submit "作成" %>
+  <%= f.submit "Create Book" %>
 
 <% end %>
