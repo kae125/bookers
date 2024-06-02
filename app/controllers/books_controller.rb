@@ -19,17 +19,11 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
     @book_new = Book.new
-    @user = @book.user
-    @comment = BookComment.new
   end
 
   def edit
     @book = Book.find(params[:id])
-    if @book.user == current_user #URLを入力しても画面に飛ばせない
-       render "edit"
-    else
-       redirect_to books_path
-    end
+    redirect_to books_path
   end
   
   def update
