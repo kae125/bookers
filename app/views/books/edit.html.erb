@@ -13,9 +13,16 @@
 </div>
 
 <%= form.submit 'Update Book'%>
+
 <% end %>
-
-
+<tr>
+ <td>
+  <%= link_to "Show", book_path(@book.id) %>
+ </td>
+ <td>
+  <%= link_to "Back", books_index_path %>
+ </td>
+</tr>
   
   <% if @selected_book %>
     <div class="book">
