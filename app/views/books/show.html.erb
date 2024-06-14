@@ -7,3 +7,7 @@
   <td>
    <%= link_to "Back",books_index_path %>
   </td>
+
+<% flash.each do |key, value| %>
+  <div class="flash-message <%= key %>"><%= value %></div>
+<% end %>
