@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
   has_one_attached :image
-  
-  validates :title, presence: true
-  validates :body, presence: true
+
+ validates :title, presence: { message: 'error: Title cannot be blank.' }
+ validates :body, presence: { message: 'error: Body cannot be blank.' }
 end
