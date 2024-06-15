@@ -11,6 +11,10 @@
  <body>
    <p id="notice"></p>
    
+ <% flash.each do |key, value| %>
+  <div class="flash-message <%= key %>"><%= value %></div>
+ <% end %>
+   
 <h1>Books</h1>
 <table>
  <thead>
