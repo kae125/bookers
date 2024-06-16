@@ -53,6 +53,10 @@
 
 <h2>New book</h2>
 
+<% @book.errors.full_messages.each do |value| %>
+  <div class="flash-message"><%= value %></div>
+ <% end %>
+
 <%= form_with(model: @book, url: books_path,local: :true) do |form| %>
 
 <div class="form-group">
