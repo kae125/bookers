@@ -2,6 +2,11 @@
 
 <h1>Editing Book</h1>
 
+<% if flash[:error] %>
+  <div class="error"><%= flash[:error] %></div>
+  <div class="error-details"><%= flash[:error_details] %></div>
+<% end %>
+
 <div class="form-group">
 <%= form.label :title %><br>
 <%= form.text_field :title %>
