@@ -34,7 +34,7 @@ def update
   @book = Book.find(params[:id])
   if @book.update(book_params)
     flash[:notice] = "Book was successfully updated."
-    redirect_to update_book_path(@book.id)
+    redirect_to book_path(@book.id)
   else
     flash[:error] = @book.errors.full_messages.join(", ")
     render :edit
